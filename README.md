@@ -78,3 +78,23 @@ curl -X POST \
 Exemplo de um fluxo utilizando autenticação de autorização de código.
 
 ![alt text](./docs/images/flow-authorization-code.png)
+
+# Construindo o ambiente de desenvolvimento do key-django
+
+Para construção do projeto na stack de desenvovimento deveremos executar os comandos descritos abaixo, ao qual irá instalar todas as dependências do projeto e expor o ambiente na porta 8000.
+
+```
+docker compose -f devops/stack-dev.yaml up -d
+```
+
+Para acessar o ambiente execute o comando abaixo:
+
+```
+docker exec -it iam bash
+```
+
+Para que o projeto seja executado é necessário executar o comando descrito abaixo:
+
+```
+poetry run task dev
+```
