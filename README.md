@@ -148,7 +148,7 @@ Para as migrations não serão aplicados as regras abaixo:
 - E501 - não será realizado mudança dos help_text, será adotado o padrão de comprimento de texto gerado automaticamente pelo django.
 
 
-## Settings
+### Settings
 
 Para o settings é ignorado as regras abaixo:
 
