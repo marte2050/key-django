@@ -11,9 +11,25 @@ python = "^3.12"
 django = "^5.1.6"
 django-oauth-toolkit = "^3.0.1"
 taskipy = "^1.14.1"
+ruff = "^0.9.6"
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "S"]
+extend-select = ["E501", "N"]
+
+[tool.ruff.lint.per-file-ignores]
+"**/migrations/*" = ["RUF012", "D101", "E501"]
+"settings.py" = ["E501"]
 
 [tool.taskipy.tasks]
 dev = 'python3 iam/manage.py runserver 0:8000'
+lint = 'ruff check ./iam; ruff check . --diff'
 
 [build-system]
 requires = ["poetry-core"]
