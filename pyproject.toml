@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "key-django"
+name = "iam"
 version = "0.1.0"
 description = "Provedor Oauth2 usando django"
 authors = ["Jonathan W."]
@@ -10,7 +10,10 @@ readme = "README.md"
 python = "^3.12"
 django = "^5.1.6"
 django-oauth-toolkit = "^3.0.1"
+taskipy = "^1.14.1"
 
+[tool.taskipy.tasks]
+dev = 'python3 iam/manage.py runserver 0:8000'
 
 [build-system]
 requires = ["poetry-core"]
