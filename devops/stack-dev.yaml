@@ -1,0 +1,16 @@
+services:
+  iam:
+    container_name: iam
+    command: /oauth2-server/dev.sh
+    build: 
+      context: ./build
+      dockerfile: Dockerfile
+    env_file:
+      - ./environments/.env
+    ports:
+      - 8000:8000
+    volumes:
+      - ../iam:/oauth2-server/iam
+      - ../pyproject.toml:/oauth2-server/pyproject.toml
+      - ../poetry.lock:/oauth2-server/poetry.lock
+      - ../README.md:/oauth2-server/README.md
