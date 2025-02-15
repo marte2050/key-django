@@ -98,3 +98,60 @@ Para que o projeto seja executado é necessário executar o comando descrito aba
 ```
 poetry run task dev
 ```
+
+## Regras de linter
+
+### Regras gerais
+
+**Regras de formatação**
+
+Para esse projeto foi aplicado todas as regras de formatação do pyflakes (F), ao qual abrange:
+
+- F402 - importação de um módulo dentro de um loop;
+- F406 - from {name} import *permitido somente no nível do módulo;
+- F523 - .formata chamada tem argumentos não utilizados na(s) posição(ões): {mensagem};
+- e entre outras.
+
+**Erros (E) e Avisos, ao qual abrange:**
+
+- E101 - O recuo contém espaços e tabulações mistos;
+- E111 - O recuo não é um múltiplo de {indent_width};
+- E113 - Recuo inesperado;
+- W191 - O recuo contém tabulações;
+- W291 - Espaço em branco à direita;
+- E entre outros.
+
+**Regras de segurança, ao qual Ruff utiliza regras baseado no Bandit, ao qual inclui regras como**:
+
+- S101 → Uso de assert em produção (pode vazar informações).
+- S102 → Uso de exec() (pode ser um risco de injeção de código).
+- S103 → Uso inseguro de pickle (pode permitir execução arbitrária de código).
+- S104 → Uso inseguro de subprocess sem validação de entrada.
+- S105 → Verificação de credenciais ou senhas hardcoded no código.
+- S106 → Uso de chaves de API hardcoded.
+- S107 → Uso de eval() (pode ser explorado para execução maliciosa).
+
+
+**PEP-8-naming**
+
+Adoção das convenções de nomes de classes, método e variáveis utilizando o padrão da PEP8.
+
+**Pydoc**
+
+Para as docstring adoção se o padrão de docstrings do Google.
+
+### Migrations
+
+Para as migrations não serão aplicados as regras abaixo:
+
+- D101 - Geralmente, uma documentação de classe deve descrever o propósito da classe e listar seus atributos e métodos públicos, contudo a descrição das funcionalidades estarão descrito nas models;
+- E501 - não será realizado mudança dos help_text, será adotado o padrão de comprimento de texto gerado automaticamente pelo django.
+
+
+## Settings
+
+Para o settings é ignorado as regras abaixo:
+
+- E501 - não é possível a adoção do limite de 79 caracteres nesse arquivo em virtude do path de alguns módulos
+
+Para maiores informações sobre o Ruff e as regras aplicadas consultar: https://docs.astral.sh/ruff/rules/.
