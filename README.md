@@ -155,3 +155,11 @@ Para o settings é ignorado as regras abaixo:
 - E501 - não é possível a adoção do limite de 79 caracteres nesse arquivo em virtude do path de alguns módulos
 
 Para maiores informações sobre o Ruff e as regras aplicadas consultar: https://docs.astral.sh/ruff/rules/.
+
+## Tests
+
+Para os testes unitários foi adotado o pytest junto ao pytest-django. Para execução dos testes unitário executar o comando abaixo:
+
+```bash
+poetry run task test
+```
