@@ -14,6 +14,7 @@ taskipy = "^1.14.1"
 ruff = "^0.9.6"
 pytest-env = "^1.1.5"
 pytest-django = "^4.10.0"
+django-cotton = "^1.5.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"

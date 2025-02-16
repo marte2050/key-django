@@ -290,6 +290,20 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-cotton"
+version = "1.5.2"
+description = "Bringing component based design to Django templates."
+optional = false
+python-versions = "<4,>=3.8"
+files = [
+    {file = "django_cotton-1.5.2-py3-none-any.whl", hash = "sha256:118fdf905152b1118f0ca07eec82a134a99a3770d0dd0b907956d0dcfcecd933"},
+    {file = "django_cotton-1.5.2.tar.gz", hash = "sha256:d4856bf8fbcca6680f84a44e9e72860d2ba4e5b3759f9a6ab5a865b21f350f7c"},
+]
+
+[package.dependencies]
+django = ">=4.2,<5.2"
+
+[[package]]
 name = "django-oauth-toolkit"
 version = "3.0.1"
 description = "OAuth2 Provider for Django"
@@ -675,4 +689,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "857f46eefee0f813ffdfc63db4275da912062a9befce2a3865d6bae4eca435cf"
+content-hash = "317eb48ee4e47f01342ad61163bfdcabe05770995c0ad262886449bcf9db3b19"
