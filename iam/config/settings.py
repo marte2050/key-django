@@ -14,6 +14,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_cotton",
     "oauth2_provider",
     "users",
 ]
@@ -33,7 +34,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -45,6 +46,8 @@ TEMPLATES = [
         },
     },
 ]
+
+COTTON_DIR = "ui"
 
 WSGI_APPLICATION = "config.wsgi.application"
 
