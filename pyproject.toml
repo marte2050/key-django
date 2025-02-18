@@ -15,10 +15,12 @@ ruff = "^0.9.6"
 pytest-env = "^1.1.5"
 pytest-django = "^4.10.0"
 django-cotton = "^1.5.2"
+django-tailwind = "^3.8.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"
 pytest-mock = "^3.14.0"
+django-tailwind = {extras = ["reload"], version = "^3.8.0"}
 
 [tool.ruff]
 line-length = 79
@@ -38,6 +40,9 @@ extend-select = ["E501", "N"]
 dev = 'python3 iam/manage.py runserver 0:8000'
 lint = 'ruff check ./iam; ruff check . --diff'
 test = 'pytest -s -x -v iam/'
+tailwind-init = 'python iam/manage.py tailwind init'
+tailwind-install = "python iam/manage.py tailwind install"
+tailwind-start = "python iam/manage.py tailwind start"
 
 [build-system]
 requires = ["poetry-core"]
