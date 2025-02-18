@@ -11,6 +11,7 @@ services:
       - 8000:8000
     volumes:
       - ../iam:/oauth2-server/iam
+      - ../theme:/oauth2-server/theme
       - ../pyproject.toml:/oauth2-server/pyproject.toml
       - ../poetry.lock:/oauth2-server/poetry.lock
       - ../README.md:/oauth2-server/README.md
