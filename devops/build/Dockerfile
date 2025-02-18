@@ -2,6 +2,7 @@ FROM ubuntu:24.04
 
 RUN apt update
 RUN apt install -y pip pipx
+RUN apt install -y npm
 RUN PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install poetry==1.8.4
 RUN poetry config virtualenvs.in-project true
 RUN mkdir -p /oauth2-server/iam
